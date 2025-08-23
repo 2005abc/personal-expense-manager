@@ -8,7 +8,6 @@ public class Transaction {
     private String date;
     private String description;
 
-    // constructor
     public Transaction(String type, String category, double amount, String date, String description) {
         this.type = type;
         this.category = category;
@@ -17,7 +16,7 @@ public class Transaction {
         this.description = description;
     }
 
-    // --- Getters ---
+
     public String getType() {
         return type;
     }
@@ -38,7 +37,6 @@ public class Transaction {
         return description;
     }
 
-    // Optional setter for ID (if you want to use it later)
     public void setId(int id) {
         this.id = id;
     }
