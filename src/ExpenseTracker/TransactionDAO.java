@@ -4,7 +4,6 @@ import java.util.*;
 
 public class TransactionDAO {
 
-    // Add new transaction
     public void addTransaction(Transaction t) {
         String sql = "INSERT INTO transactions (type, category, amount, date, description) VALUES (?,?,?,?,?)";
         try (Connection conn = DBConnection.getConnection();
@@ -21,7 +20,6 @@ public class TransactionDAO {
         }
     }
 
-    // View all transactions
     public void viewTransactions() {
         String sql = "SELECT * FROM transactions";
         try (Connection conn = DBConnection.getConnection();
@@ -37,7 +35,6 @@ public class TransactionDAO {
         }
     }
 
-    // Get balance
     public void showBalance() {
         String incomeSql = "SELECT SUM(amount) FROM transactions WHERE type='INCOME'";
         String expenseSql = "SELECT SUM(amount) FROM transactions WHERE type='EXPENSE'";
