@@ -1,4 +1,4 @@
-Personal Expense Manager
+#Personal Expense Manager
 
 A simple yet powerful Java + MySQL-based application to track and manage personal expenses.
 This project helps users record their daily expenses, categorize them, and analyze spending patterns for better financial decisions.
