@@ -1,22 +1,74 @@
-<h2>Personal Expense Manager</h2>
+<h1 align="center">💰 Personal Expense Manager</h1>
+<p align="center">
+  A Java + MySQL based application to track, manage, and analyze personal expenses
+</p>
 
-A simple yet powerful Java + MySQL-based application to track and manage personal expenses.
-This project helps users record their daily expenses, categorize them, and analyze spending patterns for better financial decisions.
+<hr>
 
-<h3>🚀 Features</h3>
+<h2>📌 Project Overview</h2>
+<p>
+Personal Expense Manager is a simple yet practical application developed using
+<b>Core Java</b> and <b>MySQL</b> that helps users record their daily expenses,
+categorize them, and monitor total spending for better financial control.
+</p>
 
-Add, Edit, and Delete Expenses – Easily manage your daily transactions.
+<h2>🚀 Features</h2>
+<ul>
+  <li>Add, edit, and delete daily expenses</li>
+  <li>Organize expenses by categories (Food, Travel, Shopping, etc.)</li>
+  <li>View total expense summary in real time</li>
+  <li>Persistent data storage using MySQL</li>
+</ul>
 
-Expense Categories – Organize spending into categories (Food, Travel, Shopping, etc.).
+<h2>🛠️ Tech Stack</h2>
+<ul>
+  <li><b>Backend:</b> Java (JDBC)</li>
+  <li><b>Database:</b> MySQL</li>
+  <li><b>IDE:</b> IntelliJ IDEA</li>
+</ul>
 
-Total Expense Summary – Get an overview of your total spending in real time.
+<h2>📁 Project Structure</h2>
 
-Database Integration – All data is stored in MySQL for persistence.
+<pre>
+PersonalExpenseManager/
+│
+├── src/
+│   └── ExpenseTracker/
+│       ├── Transaction.java
+│       ├── ExpenseTracker.java
+│       ├── TransactionDAO.java
+│       └── DBConnection.java
+│
+├── .gitignore
+├── PersonalExpenseManager.iml
+└── README.md
+</pre>
 
-<h3>🛠️ Tech Stack</h3>
+<h2>⚙️ How It Works</h2>
+<ol>
+  <li>User adds expense details (amount, category, date, description)</li>
+  <li>Application processes input via Java console</li>
+  <li>Data is stored and retrieved using JDBC</li>
+  <li>Total expense summary is calculated dynamically</li>
+</ol>
 
-Backend: Java (JDBC)
+<h2>🗄️ Database Schema (Sample)</h2>
 
-Database: MySQL
+<pre>
+CREATE TABLE expenses (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    amount DOUBLE NOT NULL,
+    category VARCHAR(50),
+    description VARCHAR(100),
+    expense_date DATE
+);
+</pre>
 
-IDE: IntelliJ IDEA
+<h2>▶️ How to Run</h2>
+<ol>
+  <li>Clone the repository</li>
+  <li>Open the project in IntelliJ IDEA</li>
+  <li>Add MySQL JDBC connector</li>
+  <li>Configure database credentials in <code>DBConnection.java</code></li>
+  <li>Run <code>Main.java</code></li>
+</ol>
